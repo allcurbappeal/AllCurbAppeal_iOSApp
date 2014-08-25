@@ -1,0 +1,502 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A82901C619AA5B6900D8A65B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A82901C519AA5B6900D8A65B /* Foundation.framework */; };
+		A82901C819AA5B6900D8A65B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A82901C719AA5B6900D8A65B /* CoreGraphics.framework */; };
+		A82901CA19AA5B6900D8A65B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A82901C919AA5B6900D8A65B /* UIKit.framework */; };
+		A82901D019AA5B6900D8A65B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A82901CE19AA5B6900D8A65B /* InfoPlist.strings */; };
+		A82901D219AA5B6900D8A65B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A82901D119AA5B6900D8A65B /* main.m */; };
+		A82901D619AA5B6900D8A65B /* JGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A82901D519AA5B6900D8A65B /* JGAppDelegate.m */; };
+		A82901D919AA5B6900D8A65B /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A82901D719AA5B6900D8A65B /* Main_iPhone.storyboard */; };
+		A82901DC19AA5B6900D8A65B /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A82901DA19AA5B6900D8A65B /* Main_iPad.storyboard */; };
+		A82901DF19AA5B6900D8A65B /* JGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A82901DE19AA5B6900D8A65B /* JGViewController.m */; };
+		A82901E119AA5B6900D8A65B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A82901E019AA5B6900D8A65B /* Images.xcassets */; };
+		A82901E819AA5B6A00D8A65B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A82901E719AA5B6A00D8A65B /* XCTest.framework */; };
+		A82901E919AA5B6A00D8A65B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A82901C519AA5B6900D8A65B /* Foundation.framework */; };
+		A82901EA19AA5B6A00D8A65B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A82901C919AA5B6900D8A65B /* UIKit.framework */; };
+		A82901F219AA5B6A00D8A65B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A82901F019AA5B6A00D8A65B /* InfoPlist.strings */; };
+		A82901F419AA5B6A00D8A65B /* All_Curb_AppealTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A82901F319AA5B6A00D8A65B /* All_Curb_AppealTests.m */; };
+		A82901FE19AA5D1A00D8A65B /* MainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = A82901FD19AA5D1A00D8A65B /* MainBG.png */; };
+		A829020219AA630500D8A65B /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = A82901FF19AA630500D8A65B /* facebook.png */; };
+		A829020319AA630500D8A65B /* gplus.png in Resources */ = {isa = PBXBuildFile; fileRef = A829020019AA630500D8A65B /* gplus.png */; };
+		A829020419AA630500D8A65B /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = A829020119AA630500D8A65B /* twitter.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A82901EB19AA5B6A00D8A65B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A82901BA19AA5B6900D8A65B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A82901C119AA5B6900D8A65B;
+			remoteInfo = "All Curb Appeal";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A82901C219AA5B6900D8A65B /* All Curb Appeal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "All Curb Appeal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A82901C519AA5B6900D8A65B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A82901C719AA5B6900D8A65B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A82901C919AA5B6900D8A65B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A82901CD19AA5B6900D8A65B /* All Curb Appeal-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "All Curb Appeal-Info.plist"; sourceTree = "<group>"; };
+		A82901CF19AA5B6900D8A65B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A82901D119AA5B6900D8A65B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A82901D319AA5B6900D8A65B /* All Curb Appeal-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "All Curb Appeal-Prefix.pch"; sourceTree = "<group>"; };
+		A82901D419AA5B6900D8A65B /* JGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JGAppDelegate.h; sourceTree = "<group>"; };
+		A82901D519AA5B6900D8A65B /* JGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JGAppDelegate.m; sourceTree = "<group>"; };
+		A82901D819AA5B6900D8A65B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		A82901DB19AA5B6900D8A65B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		A82901DD19AA5B6900D8A65B /* JGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JGViewController.h; sourceTree = "<group>"; };
+		A82901DE19AA5B6900D8A65B /* JGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JGViewController.m; sourceTree = "<group>"; };
+		A82901E019AA5B6900D8A65B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A82901E619AA5B6A00D8A65B /* All Curb AppealTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "All Curb AppealTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A82901E719AA5B6A00D8A65B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A82901EF19AA5B6A00D8A65B /* All Curb AppealTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "All Curb AppealTests-Info.plist"; sourceTree = "<group>"; };
+		A82901F119AA5B6A00D8A65B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A82901F319AA5B6A00D8A65B /* All_Curb_AppealTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = All_Curb_AppealTests.m; sourceTree = "<group>"; };
+		A82901FD19AA5D1A00D8A65B /* MainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainBG.png; sourceTree = "<group>"; };
+		A82901FF19AA630500D8A65B /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		A829020019AA630500D8A65B /* gplus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gplus.png; sourceTree = "<group>"; };
+		A829020119AA630500D8A65B /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A82901BF19AA5B6900D8A65B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A82901C819AA5B6900D8A65B /* CoreGraphics.framework in Frameworks */,
+				A82901CA19AA5B6900D8A65B /* UIKit.framework in Frameworks */,
+				A82901C619AA5B6900D8A65B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A82901E319AA5B6A00D8A65B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A82901E819AA5B6A00D8A65B /* XCTest.framework in Frameworks */,
+				A82901EA19AA5B6A00D8A65B /* UIKit.framework in Frameworks */,
+				A82901E919AA5B6A00D8A65B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A82901B919AA5B6900D8A65B = {
+			isa = PBXGroup;
+			children = (
+				A82901CB19AA5B6900D8A65B /* All Curb Appeal */,
+				A82901ED19AA5B6A00D8A65B /* All Curb AppealTests */,
+				A82901C419AA5B6900D8A65B /* Frameworks */,
+				A82901C319AA5B6900D8A65B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A82901C319AA5B6900D8A65B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A82901C219AA5B6900D8A65B /* All Curb Appeal.app */,
+				A82901E619AA5B6A00D8A65B /* All Curb AppealTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A82901C419AA5B6900D8A65B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A82901C519AA5B6900D8A65B /* Foundation.framework */,
+				A82901C719AA5B6900D8A65B /* CoreGraphics.framework */,
+				A82901C919AA5B6900D8A65B /* UIKit.framework */,
+				A82901E719AA5B6A00D8A65B /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A82901CB19AA5B6900D8A65B /* All Curb Appeal */ = {
+			isa = PBXGroup;
+			children = (
+				A82901FD19AA5D1A00D8A65B /* MainBG.png */,
+				A82901FF19AA630500D8A65B /* facebook.png */,
+				A829020019AA630500D8A65B /* gplus.png */,
+				A829020119AA630500D8A65B /* twitter.png */,
+				A82901D419AA5B6900D8A65B /* JGAppDelegate.h */,
+				A82901D519AA5B6900D8A65B /* JGAppDelegate.m */,
+				A82901D719AA5B6900D8A65B /* Main_iPhone.storyboard */,
+				A82901DA19AA5B6900D8A65B /* Main_iPad.storyboard */,
+				A82901DD19AA5B6900D8A65B /* JGViewController.h */,
+				A82901DE19AA5B6900D8A65B /* JGViewController.m */,
+				A82901E019AA5B6900D8A65B /* Images.xcassets */,
+				A82901CC19AA5B6900D8A65B /* Supporting Files */,
+			);
+			path = "All Curb Appeal";
+			sourceTree = "<group>";
+		};
+		A82901CC19AA5B6900D8A65B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A82901CD19AA5B6900D8A65B /* All Curb Appeal-Info.plist */,
+				A82901CE19AA5B6900D8A65B /* InfoPlist.strings */,
+				A82901D119AA5B6900D8A65B /* main.m */,
+				A82901D319AA5B6900D8A65B /* All Curb Appeal-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A82901ED19AA5B6A00D8A65B /* All Curb AppealTests */ = {
+			isa = PBXGroup;
+			children = (
+				A82901F319AA5B6A00D8A65B /* All_Curb_AppealTests.m */,
+				A82901EE19AA5B6A00D8A65B /* Supporting Files */,
+			);
+			path = "All Curb AppealTests";
+			sourceTree = "<group>";
+		};
+		A82901EE19AA5B6A00D8A65B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A82901EF19AA5B6A00D8A65B /* All Curb AppealTests-Info.plist */,
+				A82901F019AA5B6A00D8A65B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A82901C119AA5B6900D8A65B /* All Curb Appeal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A82901F719AA5B6A00D8A65B /* Build configuration list for PBXNativeTarget "All Curb Appeal" */;
+			buildPhases = (
+				A82901BE19AA5B6900D8A65B /* Sources */,
+				A82901BF19AA5B6900D8A65B /* Frameworks */,
+				A82901C019AA5B6900D8A65B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "All Curb Appeal";
+			productName = "All Curb Appeal";
+			productReference = A82901C219AA5B6900D8A65B /* All Curb Appeal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A82901E519AA5B6A00D8A65B /* All Curb AppealTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A82901FA19AA5B6A00D8A65B /* Build configuration list for PBXNativeTarget "All Curb AppealTests" */;
+			buildPhases = (
+				A82901E219AA5B6A00D8A65B /* Sources */,
+				A82901E319AA5B6A00D8A65B /* Frameworks */,
+				A82901E419AA5B6A00D8A65B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A82901EC19AA5B6A00D8A65B /* PBXTargetDependency */,
+			);
+			name = "All Curb AppealTests";
+			productName = "All Curb AppealTests";
+			productReference = A82901E619AA5B6A00D8A65B /* All Curb AppealTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A82901BA19AA5B6900D8A65B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JG;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Joy;
+				TargetAttributes = {
+					A82901E519AA5B6A00D8A65B = {
+						TestTargetID = A82901C119AA5B6900D8A65B;
+					};
+				};
+			};
+			buildConfigurationList = A82901BD19AA5B6900D8A65B /* Build configuration list for PBXProject "All Curb Appeal" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A82901B919AA5B6900D8A65B;
+			productRefGroup = A82901C319AA5B6900D8A65B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A82901C119AA5B6900D8A65B /* All Curb Appeal */,
+				A82901E519AA5B6A00D8A65B /* All Curb AppealTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A82901C019AA5B6900D8A65B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A829020319AA630500D8A65B /* gplus.png in Resources */,
+				A829020419AA630500D8A65B /* twitter.png in Resources */,
+				A82901FE19AA5D1A00D8A65B /* MainBG.png in Resources */,
+				A829020219AA630500D8A65B /* facebook.png in Resources */,
+				A82901DC19AA5B6900D8A65B /* Main_iPad.storyboard in Resources */,
+				A82901E119AA5B6900D8A65B /* Images.xcassets in Resources */,
+				A82901D919AA5B6900D8A65B /* Main_iPhone.storyboard in Resources */,
+				A82901D019AA5B6900D8A65B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A82901E419AA5B6A00D8A65B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A82901F219AA5B6A00D8A65B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A82901BE19AA5B6900D8A65B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A82901D219AA5B6900D8A65B /* main.m in Sources */,
+				A82901DF19AA5B6900D8A65B /* JGViewController.m in Sources */,
+				A82901D619AA5B6900D8A65B /* JGAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A82901E219AA5B6A00D8A65B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A82901F419AA5B6A00D8A65B /* All_Curb_AppealTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A82901EC19AA5B6A00D8A65B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A82901C119AA5B6900D8A65B /* All Curb Appeal */;
+			targetProxy = A82901EB19AA5B6A00D8A65B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A82901CE19AA5B6900D8A65B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A82901CF19AA5B6900D8A65B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A82901D719AA5B6900D8A65B /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A82901D819AA5B6900D8A65B /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		A82901DA19AA5B6900D8A65B /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A82901DB19AA5B6900D8A65B /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		A82901F019AA5B6A00D8A65B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A82901F119AA5B6A00D8A65B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A82901F519AA5B6A00D8A65B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A82901F619AA5B6A00D8A65B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A82901F819AA5B6A00D8A65B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "All Curb Appeal/All Curb Appeal-Prefix.pch";
+				INFOPLIST_FILE = "All Curb Appeal/All Curb Appeal-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A82901F919AA5B6A00D8A65B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "All Curb Appeal/All Curb Appeal-Prefix.pch";
+				INFOPLIST_FILE = "All Curb Appeal/All Curb Appeal-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A82901FB19AA5B6A00D8A65B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/All Curb Appeal.app/All Curb Appeal";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "All Curb Appeal/All Curb Appeal-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "All Curb AppealTests/All Curb AppealTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A82901FC19AA5B6A00D8A65B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/All Curb Appeal.app/All Curb Appeal";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "All Curb Appeal/All Curb Appeal-Prefix.pch";
+				INFOPLIST_FILE = "All Curb AppealTests/All Curb AppealTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A82901BD19AA5B6900D8A65B /* Build configuration list for PBXProject "All Curb Appeal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A82901F519AA5B6A00D8A65B /* Debug */,
+				A82901F619AA5B6A00D8A65B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A82901F719AA5B6A00D8A65B /* Build configuration list for PBXNativeTarget "All Curb Appeal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A82901F819AA5B6A00D8A65B /* Debug */,
+				A82901F919AA5B6A00D8A65B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A82901FA19AA5B6A00D8A65B /* Build configuration list for PBXNativeTarget "All Curb AppealTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A82901FB19AA5B6A00D8A65B /* Debug */,
+				A82901FC19AA5B6A00D8A65B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A82901BA19AA5B6900D8A65B /* Project object */;
+}
