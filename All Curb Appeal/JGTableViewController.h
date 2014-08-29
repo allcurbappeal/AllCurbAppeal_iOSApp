@@ -10,7 +10,7 @@
 #import "CountryPicker.h"
 @class RadioButton;
 
-@interface JGTableViewController : UITableViewController <CountryPickerDelegate,UITextFieldDelegate,NSURLConnectionDelegate> {
+@interface JGTableViewController : UITableViewController <CountryPickerDelegate,UITextFieldDelegate,NSURLConnectionDelegate,UIActionSheetDelegate> {
     
     MBProgressHUD *HUD;
     NSMutableData* httpResponse;

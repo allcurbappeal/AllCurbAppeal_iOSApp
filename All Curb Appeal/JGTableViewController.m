@@ -144,7 +144,7 @@
 }
 
 - (BOOL)validateEntry {
-#warning - Need to do email validation
+
    // if()
     BOOL isPassed = YES;
     
@@ -165,7 +165,7 @@
         return NO;
     }
     else {
-        if(![self IsValidEmail:_email.text Strict:NO]){
+        if(![self isValidEmail:_email.text Strict:NO]){
             [self showMessage:@"Please provide valid email "];
             return NO;
         }
@@ -185,7 +185,7 @@
     
 }
 
-- (BOOL) IsValidEmail:(NSString *)emailString Strict:(BOOL)strictFilter
+- (BOOL)isValidEmail:(NSString *)emailString Strict:(BOOL)strictFilter
 {
     NSString *stricterFilterString = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
     NSString *laxString = @".+@.+\\.[A-Za-z]{2}[A-Za-z]*";
