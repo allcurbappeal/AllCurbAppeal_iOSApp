@@ -14,3 +14,9 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+#import "MBProgressHUD.h"
+#import "JGButton.h"
+
+#define WEB_SERVICE_PATH @"http://www.allcurbappeal.com/development/allcurbappeal/webservice/mywebservice.php"
+
+#define TEST_SERVICE_PATH @"http://playgroundhumor.com/demo/webservice/mywebservice.php"

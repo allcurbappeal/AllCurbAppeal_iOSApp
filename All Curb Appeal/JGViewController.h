@@ -10,4 +10,6 @@
 
 @interface JGViewController : UIViewController
 
+@property (nonatomic,weak) IBOutlet JGButton *loginBtn;
+
 @end
