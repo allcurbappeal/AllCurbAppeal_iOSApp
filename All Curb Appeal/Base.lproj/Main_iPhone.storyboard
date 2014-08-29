@@ -246,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-437" y="292"/>
+            <point key="canvasLocation" x="-569" y="-540"/>
         </scene>
         <!--Login View Controller - Login-->
         <scene sceneID="bei-27-TWg">
@@ -486,12 +486,12 @@
                         <outlet property="txtPassword" destination="MGm-cX-t4f" id="21s-A5-0rs"/>
                         <outlet property="txtUserName" destination="bse-k2-M5a" id="i6N-UZ-xXr"/>
                         <segue destination="lfB-cc-l7W" kind="push" identifier="ResetPassword" id="CCJ-ao-6Wh"/>
-                        <segue destination="MzH-38-TPc" kind="push" identifier="Pay2" id="p46-NI-1o6"/>
+                        <segue destination="LvG-jI-nGP" kind="push" identifier="Pay2" id="bQF-Fm-4Xo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psz-bT-2zO" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="115" y="469"/>
+            <point key="canvasLocation" x="42" y="157"/>
         </scene>
         <!--Table View Controller - Register-->
         <scene sceneID="6Zi-UB-34T">
@@ -842,33 +842,48 @@
                         <outlet property="phone" destination="K0v-zc-wIv" id="VLi-Xw-1dc"/>
                         <outlet property="username" destination="cpZ-3b-DGU" id="INu-uu-dGJ"/>
                         <outlet property="zip" destination="ktt-aN-eIu" id="jUq-Ma-1tF"/>
-                        <segue destination="MzH-38-TPc" kind="push" identifier="Pay" id="1dn-82-24X"/>
+                        <segue destination="LvG-jI-nGP" kind="push" identifier="Pay" id="s3C-Ma-hwe"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TrJ-Wl-nRT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-18" y="-572"/>
+            <point key="canvasLocation" x="42" y="-540"/>
         </scene>
-        <!--View Controller - Pay Screen-->
-        <scene sceneID="cXG-iT-Lgw">
+        <!--Pay View Controller - Payment-->
+        <scene sceneID="JJU-mJ-aCM">
             <objects>
-                <viewController id="MzH-38-TPc" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="oLp-JS-A7l"/>
-                        <viewControllerLayoutGuide type="bottom" id="meD-G2-6mX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="lJr-79-0jA">
+                <tableViewController id="LvG-jI-nGP" customClass="JGPayViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="0n0-Mm-zVT">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Pay Screen" id="rft-w7-CYS">
-                        <barButtonItem key="backBarButtonItem" title="Logout" id="0w1-ZR-1Hs"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="fYJ-84-fHH">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fYJ-84-fHH" id="qFv-at-6Dc">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LvG-jI-nGP" id="djx-D8-CJn"/>
+                            <outlet property="delegate" destination="LvG-jI-nGP" id="FH9-pE-vFV"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Payment" id="Et9-zg-bEL">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" style="plain" id="Zf6-nb-QEP">
+                            <connections>
+                                <segue destination="DwH-NR-h4x" kind="unwind" unwindAction="unwindToMain:" id="VQy-a5-g4j"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uvu-AU-6Xp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RwH-tn-PWW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="DwH-NR-h4x" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="490" y="-420"/>
+            <point key="canvasLocation" x="934" y="-492"/>
         </scene>
         <!--View Controller - Reset Password-->
         <scene sceneID="rNv-85-eeP">
@@ -1042,7 +1057,7 @@ we’ll send you a link to reset your password</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O0B-HQ-xPz" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="551" y="495"/>
+            <point key="canvasLocation" x="735" y="367"/>
         </scene>
     </scenes>
     <resources>
@@ -1060,6 +1075,6 @@ we’ll send you a link to reset your password</string>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="p46-NI-1o6"/>
+        <segue reference="bQF-Fm-4Xo"/>
     </inferredMetricsTieBreakers>
 </document>

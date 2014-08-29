@@ -23,6 +23,7 @@
 		A82901EA19AA5B6A00D8A65B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A82901C919AA5B6900D8A65B /* UIKit.framework */; };
 		A82901F219AA5B6A00D8A65B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A82901F019AA5B6A00D8A65B /* InfoPlist.strings */; };
 		A82901F419AA5B6A00D8A65B /* All_Curb_AppealTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A82901F319AA5B6A00D8A65B /* All_Curb_AppealTests.m */; };
+		A836F2A319B104F6006B930B /* JGPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A836F2A219B104F6006B930B /* JGPayViewController.m */; };
 		A8388E7C19AFAF8E00B537C4 /* JGTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A8388E7B19AFAF8E00B537C4 /* JGTextField.m */; };
 		A8388E7F19AFB29E00B537C4 /* JGButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A8388E7E19AFB29E00B537C4 /* JGButton.m */; };
 		A8388E8519AFB8F600B537C4 /* JGTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8388E8419AFB8F600B537C4 /* JGTableViewController.m */; };
@@ -318,6 +319,8 @@
 		A82901EF19AA5B6A00D8A65B /* All Curb AppealTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "All Curb AppealTests-Info.plist"; sourceTree = "<group>"; };
 		A82901F119AA5B6A00D8A65B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A82901F319AA5B6A00D8A65B /* All_Curb_AppealTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = All_Curb_AppealTests.m; sourceTree = "<group>"; };
+		A836F2A119B104F6006B930B /* JGPayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGPayViewController.h; sourceTree = "<group>"; };
+		A836F2A219B104F6006B930B /* JGPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGPayViewController.m; sourceTree = "<group>"; };
 		A8388E7A19AFAF8E00B537C4 /* JGTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGTextField.h; sourceTree = "<group>"; };
 		A8388E7B19AFAF8E00B537C4 /* JGTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGTextField.m; sourceTree = "<group>"; };
 		A8388E7D19AFB29E00B537C4 /* JGButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGButton.h; sourceTree = "<group>"; };
@@ -719,6 +722,8 @@
 				A82901DE19AA5B6900D8A65B /* JGViewController.m */,
 				A82323DD19ABB98F00107849 /* JGLoginViewController.h */,
 				A82323DE19ABB98F00107849 /* JGLoginViewController.m */,
+				A836F2A119B104F6006B930B /* JGPayViewController.h */,
+				A836F2A219B104F6006B930B /* JGPayViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -1340,6 +1345,7 @@
 				A838908C19AFC5BD00B537C4 /* CountryPicker.m in Sources */,
 				A8388E7F19AFB29E00B537C4 /* JGButton.m in Sources */,
 				A82901D219AA5B6900D8A65B /* main.m in Sources */,
+				A836F2A319B104F6006B930B /* JGPayViewController.m in Sources */,
 				A8388E8519AFB8F600B537C4 /* JGTableViewController.m in Sources */,
 				A855974A19AD1FA200C289FB /* MBProgressHUD.m in Sources */,
 				A8388E7C19AFAF8E00B537C4 /* JGTextField.m in Sources */,
