@@ -124,7 +124,8 @@
     
     if([dictionary valueForKey:@"success"] != nil){
         if([[dictionary valueForKey:@"success"] integerValue] == 1){
-            
+            NSDictionary *data = [dictionary valueForKey:@"data"];
+            _userID = [[data valueForKey:@"id"] objectAtIndex:0];
             [self performSegueWithIdentifier:@"Pay2" sender:self];
         }
         else {
@@ -150,6 +151,14 @@
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:strMsg delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
     [alert show];
+    
+}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([[segue identifier] isEqualToString:@"Pay2"]) {
+        JGPayViewController *payVC = [segue destinationViewController];
+        payVC.userID = _userID;
+    }
     
 }
 

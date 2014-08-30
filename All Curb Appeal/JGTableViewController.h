@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JGPayViewController.h"
 #import "CountryPicker.h"
 @class RadioButton;
 
@@ -14,7 +15,9 @@
     
     MBProgressHUD *HUD;
     NSMutableData* httpResponse;
+    BOOL bIsCountry;
 }
+@property (nonatomic,strong) NSString *userID;
 
 @property (nonatomic, strong) IBOutlet RadioButton* maleButton;
 

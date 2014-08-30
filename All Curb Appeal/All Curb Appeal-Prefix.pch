@@ -16,6 +16,8 @@
 #endif
 #import "MBProgressHUD.h"
 #import "JGButton.h"
+#import "JGMainObject.h"
+#import "ASIFormDataRequest.h"
 
 #define WEB_SERVICE_PATH @"http://www.allcurbappeal.com/development/allcurbappeal/webservice/mywebservice.php"
 

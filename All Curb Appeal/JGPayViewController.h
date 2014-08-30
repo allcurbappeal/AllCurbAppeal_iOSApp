@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JGPayViewController : UITableViewController
+@interface JGPayViewController : UITableViewController<NSURLConnectionDelegate> {
+    
+    MBProgressHUD *HUD;
+    NSMutableData* httpResponse;
+    JGMainObject *mObj;
+}
+@property (nonatomic,strong) NSString *userID;
 
 @end

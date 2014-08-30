@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JGPayViewController.h"
 
 @interface JGLoginViewController : UIViewController <UITextFieldDelegate,MBProgressHUDDelegate,NSURLConnectionDelegate> {
     MBProgressHUD *HUD;
     NSMutableData* httpResponse;
 }
+@property (nonatomic,strong) NSString *userID;
 
 @property (nonatomic,weak) IBOutlet UITextField *txtUserName;
 @property (nonatomic,weak) IBOutlet UITextField *txtPassword;

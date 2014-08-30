@@ -40,37 +40,66 @@
 }
 -(IBAction)openCountryPicker:(id)sender {
 
-    [_country becomeFirstResponder];
-//    _ctPicker  = [[CountryPicker alloc] initWithFrame:CGRectMake(0, 0, 320, 340)];
-//    [_ctPicker setDelegate:self];
-//    [_country setInputView:_ctPicker];
+    bIsCountry = YES;
+    [self showCountry];
+    //[_country becomeFirstResponder];
+
 }
 -(IBAction)openDatePicker:(id)sender {
 
+    bIsCountry = NO;
     [self showAction];
     
 }
 
--(void) showAction
+-(void)showCountry
 {
     [self dismissKeyboard];
     
-    UIActionSheet *asheet = [[UIActionSheet alloc] initWithTitle:@"Pick the date." delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Select", nil];
+    UIActionSheet *asheet = asheet = [[UIActionSheet alloc] initWithTitle:@"Pick your country." delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:nil, nil];
     [asheet showInView:[self.view superview]];
-    [asheet setFrame:CGRectMake(0, 117, 320, 383)];
+    [asheet setFrame:CGRectMake(0, self.view.frame.size.height-383, 320, 340)];
+}
+
+-(void)showAction
+{
+    [self dismissKeyboard];
+    
+    UIActionSheet *asheet ;
+   
+        asheet = [[UIActionSheet alloc] initWithTitle:@"Pick the date." delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Select", nil];
+    [asheet showInView:[self.view superview]];
+    [asheet setFrame:CGRectMake(0, self.view.frame.size.height-383, 320, 320)];
+    
+    
 }
 
 - (void)willPresentActionSheet:(UIActionSheet *)actionSheet
 {
-    _dobPicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 40, 320, 216)];
-    _dobPicker.datePickerMode = UIDatePickerModeDate;
-    [_dobPicker addTarget:self action:@selector(datePickerValueChanged:) forControlEvents:UIControlEventValueChanged];
-    
-    [actionSheet addSubview:_dobPicker];
-
     NSArray *subviews = [actionSheet subviews];
-    [[subviews objectAtIndex:2] setFrame:CGRectMake(20, 266, 280, 46)];
-    [[subviews objectAtIndex:3] setFrame:CGRectMake(20, 317, 280, 46)];
+    
+    
+    if(!bIsCountry) {
+        _dobPicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 40, 320, 216)];
+        _dobPicker.datePickerMode = UIDatePickerModeDate;
+        [_dobPicker addTarget:self action:@selector(datePickerValueChanged:) forControlEvents:UIControlEventValueChanged];
+        
+        [actionSheet addSubview:_dobPicker];
+        [[subviews objectAtIndex:2] setFrame:CGRectMake(20, 252, 280, 46)];
+        [[subviews objectAtIndex:3] setFrame:CGRectMake(20, 312, 280, 46)];
+    }
+    else {
+        
+        _ctPicker  = [[CountryPicker alloc] initWithFrame:CGRectMake(0, 0, 320, 216)];
+        [_ctPicker setDelegate:self];
+       
+        [actionSheet addSubview:_ctPicker];
+        [[subviews objectAtIndex:2] setFrame:CGRectMake(20, 252, 280, 46)];
+    }
+
+    
+    
+    
     
 }
 
@@ -241,7 +270,8 @@
     
     if([dictionary valueForKey:@"success"] != nil){
         if([[dictionary valueForKey:@"success"] integerValue] == 1){
-            
+            _userID = [dictionary valueForKey:@"id"];
+
             [self performSegueWithIdentifier:@"Pay" sender:self];
         }
         else {
@@ -267,15 +297,18 @@
         }
     }
 }
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if([[segue identifier] isEqualToString:@"Pay"]) {
+        JGPayViewController *payVC = [segue destinationViewController];
+        payVC.userID = _userID;
+    }
+    
 }
-*/
+
 
 @end
