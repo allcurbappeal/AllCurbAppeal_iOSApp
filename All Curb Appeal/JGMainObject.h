@@ -11,6 +11,7 @@
 @interface JGMainObject : NSObject
 + (id)sharedInstance;
 
+@property (nonatomic,strong) NSString *userID;
 //0
 @property (nonatomic,strong) NSString *cardType;
 @property (nonatomic,strong) NSString *cardNumber;

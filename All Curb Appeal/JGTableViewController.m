@@ -19,7 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.selectedDate = [NSDate date];
     _maleButton.selected = YES;
     _gender = @"male";
     httpResponse = [[NSMutableData alloc] init];
@@ -41,84 +41,46 @@
 -(IBAction)openCountryPicker:(id)sender {
 
     bIsCountry = YES;
-    [self showCountry];
-    //[_country becomeFirstResponder];
+    
+    arrCountry = [NSMutableArray array];
+    for (NSString *code in [NSLocale ISOCountryCodes])
+    {
+        NSString *identifier = [NSLocale localeIdentifierFromComponents:@{NSLocaleCountryCode: code}];
+        NSString *countryName = [[NSLocale currentLocale] displayNameForKey:NSLocaleIdentifier value:identifier];
+        [arrCountry addObject:countryName];
+    }
+    
+    [ActionSheetStringPicker showPickerWithTitle:@"Select Country" rows:arrCountry initialSelection:self.selectedIndex target:self successAction:@selector(countryWasSelected:element:) cancelAction:@selector(actionPickerCancelled:) origin:sender];
+    
+    
 
 }
+
+- (void)countryWasSelected:(NSNumber *)selectedIndex element:(id)element {
+    self.selectedIndex = [selectedIndex intValue];
+    self.country.text = (arrCountry)[(NSUInteger) self.selectedIndex];
+}
+
+- (void)actionPickerCancelled:(id)sender {
+    NSLog(@"Delegate has been informed that ActionSheetPicker was cancelled");
+}
+
 -(IBAction)openDatePicker:(id)sender {
 
-    bIsCountry = NO;
-    [self showAction];
-    
+    _actionSheetPicker = [[ActionSheetDatePicker alloc] initWithTitle:@"Date of Birth" datePickerMode:UIDatePickerModeDate selectedDate:self.selectedDate target:self action:@selector(dateWasSelected:element:) origin:sender];
+    self.actionSheetPicker.hideCancel = YES;
+    [self.actionSheetPicker showActionSheetPicker];
 }
-
--(void)showCountry
-{
-    [self dismissKeyboard];
-    
-    UIActionSheet *asheet = asheet = [[UIActionSheet alloc] initWithTitle:@"Pick your country." delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:nil, nil];
-    [asheet showInView:[self.view superview]];
-    [asheet setFrame:CGRectMake(0, self.view.frame.size.height-383, 320, 340)];
-}
-
--(void)showAction
-{
-    [self dismissKeyboard];
-    
-    UIActionSheet *asheet ;
-   
-        asheet = [[UIActionSheet alloc] initWithTitle:@"Pick the date." delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Select", nil];
-    [asheet showInView:[self.view superview]];
-    [asheet setFrame:CGRectMake(0, self.view.frame.size.height-383, 320, 320)];
-    
-    
-}
-
-- (void)willPresentActionSheet:(UIActionSheet *)actionSheet
-{
-    NSArray *subviews = [actionSheet subviews];
-    
-    
-    if(!bIsCountry) {
-        _dobPicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 40, 320, 216)];
-        _dobPicker.datePickerMode = UIDatePickerModeDate;
-        [_dobPicker addTarget:self action:@selector(datePickerValueChanged:) forControlEvents:UIControlEventValueChanged];
-        
-        [actionSheet addSubview:_dobPicker];
-        [[subviews objectAtIndex:2] setFrame:CGRectMake(20, 252, 280, 46)];
-        [[subviews objectAtIndex:3] setFrame:CGRectMake(20, 312, 280, 46)];
-    }
-    else {
-        
-        _ctPicker  = [[CountryPicker alloc] initWithFrame:CGRectMake(0, 0, 320, 216)];
-        [_ctPicker setDelegate:self];
-       
-        [actionSheet addSubview:_ctPicker];
-        [[subviews objectAtIndex:2] setFrame:CGRectMake(20, 252, 280, 46)];
-    }
-
-    
-    
-    
-    
-}
-
-- (IBAction)datePickerValueChanged:(id)sender {
-    
-    NSDate *dob = _dobPicker.date;
+- (void)dateWasSelected:(NSDate *)selectedDate element:(id)element {
+    self.selectedDate = selectedDate;
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"dd/MM/yyyy"];
-    NSString *dateString = [dateFormat stringFromDate:dob];
+    NSString *dateString = [dateFormat stringFromDate:self.selectedDate];
     
     [_birthday setText:dateString];
 }
 
-#pragma mark - Country Picker Delegate 
-- (void)countryPicker:(__unused CountryPicker *)picker didSelectCountryWithName:(NSString *)name code:(NSString *)code
-{
-    _country.text = name;
-    //_codeLabel.text = code;
-}
+
 #pragma mark - Table view data source
 - (IBAction)registerAction:(id)sender {
     

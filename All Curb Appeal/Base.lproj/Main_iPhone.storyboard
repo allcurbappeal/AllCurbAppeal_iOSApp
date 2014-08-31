@@ -853,7 +853,7 @@
         <scene sceneID="JJU-mJ-aCM">
             <objects>
                 <tableViewController id="LvG-jI-nGP" customClass="JGPayViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="0n0-Mm-zVT">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="0n0-Mm-zVT">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -881,6 +881,16 @@
                                                     <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abv-5P-GtE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="284" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="openCardPicker:" destination="LvG-jI-nGP" eventType="touchUpInside" id="DNY-6c-ixb"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -902,7 +912,10 @@
                                                     <rect key="frame" x="20" y="29" width="280" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="LvG-jI-nGP" id="T0w-dX-wym"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -921,12 +934,44 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hDZ-T8-EnY" customClass="JGTextField">
-                                                    <rect key="frame" x="20" y="29" width="280" height="30"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Month" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hDZ-T8-EnY" customClass="JGTextField">
+                                                    <rect key="frame" x="20" y="29" width="100" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="LvG-jI-nGP" id="FiR-K9-sgu"/>
+                                                    </connections>
                                                 </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yuy-Br-yrX">
+                                                    <rect key="frame" x="10" y="18" width="120" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="openDatePicker:" destination="LvG-jI-nGP" eventType="touchUpInside" id="2Ae-U0-gxG"/>
+                                                    </connections>
+                                                </button>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Year" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EC7-1H-yii" customClass="JGTextField">
+                                                    <rect key="frame" x="180" y="29" width="100" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="LvG-jI-nGP" id="gnV-Zu-B4J"/>
+                                                    </connections>
+                                                </textField>
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnH-dh-KES">
+                                                    <rect key="frame" x="170" y="18" width="120" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="openDatePicker:" destination="LvG-jI-nGP" eventType="touchUpInside" id="Qba-Ve-WOZ"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -948,7 +993,10 @@
                                                     <rect key="frame" x="20" y="29" width="280" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="LvG-jI-nGP" id="hfd-kz-6rJ"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -974,6 +1022,9 @@
                                                             <integer key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="saveData:" destination="LvG-jI-nGP" eventType="touchUpInside" id="Hp6-Yx-OWB"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -994,7 +1045,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="xto-dP-Nnh" kind="push" id="H9S-3v-GCg"/>
+                        <outlet property="cardNumber" destination="Jb9-5c-AgW" id="Eg4-GG-fsS"/>
+                        <outlet property="cardType" destination="S3P-vD-P9I" id="0SQ-os-9OR"/>
+                        <outlet property="cvv" destination="zXn-u4-Euw" id="Vae-ZY-WfU"/>
+                        <outlet property="monthExpiry" destination="hDZ-T8-EnY" id="dpA-Ig-wh1"/>
+                        <outlet property="yearExpiry" destination="EC7-1H-yii" id="7DR-0f-trc"/>
+                        <segue destination="xto-dP-Nnh" kind="push" identifier="picture" id="H9S-3v-GCg"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RwH-tn-PWW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1006,7 +1062,7 @@
         <scene sceneID="6lL-Pd-CHe">
             <objects>
                 <tableViewController id="xto-dP-Nnh" customClass="JGPostViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="iIy-Ft-0ra">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="iIy-Ft-0ra">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1020,7 +1076,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="137"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acV-cj-TGJ" customClass="JGButton">
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acV-cj-TGJ" customClass="JGButton">
                                                     <rect key="frame" x="171" y="54" width="129" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.2666666667" green="0.55893590329999998" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -1034,6 +1090,9 @@
                                                             <integer key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="selectPhoto:" destination="xto-dP-Nnh" eventType="touchUpInside" id="f4r-LR-zP5"/>
+                                                    </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ulD-fc-hqr">
                                                     <rect key="frame" x="20" y="9" width="120" height="120"/>
@@ -1049,7 +1108,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ENi-3B-IzG" customClass="JGButton">
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ENi-3B-IzG" customClass="JGButton">
                                                     <rect key="frame" x="80" y="7" width="160" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.2666666667" green="0.55893590329999998" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -1063,6 +1122,9 @@
                                                             <integer key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="gotoNextScreen:" destination="xto-dP-Nnh" eventType="touchUpInside" id="Wx6-T1-1oy"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1077,7 +1139,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Upload Your Picture" id="Bj0-PF-TuE"/>
                     <connections>
-                        <segue destination="TH2-4x-Jpx" kind="push" id="1up-Xm-Hd0"/>
+                        <outlet property="img1" destination="ulD-fc-hqr" id="anY-Eg-FSY"/>
+                        <segue destination="TH2-4x-Jpx" kind="push" identifier="2" id="1up-Xm-Hd0"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ai-8M-siV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1349,7 +1412,7 @@ we’ll send you a link to reset your password</string>
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWQ-cl-fUt" customClass="JGButton">
+                                                <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWQ-cl-fUt" customClass="JGButton">
                                                     <rect key="frame" x="80" y="7" width="160" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.2666666667" green="0.55893590329999998" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -1363,6 +1426,9 @@ we’ll send you a link to reset your password</string>
                                                             <integer key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="gotoNextScreen:" destination="TH2-4x-Jpx" eventType="touchUpInside" id="TCM-rj-9RM"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1377,7 +1443,8 @@ we’ll send you a link to reset your password</string>
                     </tableView>
                     <navigationItem key="navigationItem" title="Enter Ticket Number" id="2M7-rd-BRb"/>
                     <connections>
-                        <segue destination="akj-nj-CRz" kind="push" id="3W7-RD-wDr"/>
+                        <outlet property="ticketNo" destination="tf4-07-zIZ" id="mCX-cK-cOt"/>
+                        <segue destination="akj-nj-CRz" kind="push" identifier="3" id="3W7-RD-wDr"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SM4-qT-J9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1389,7 +1456,7 @@ we’ll send you a link to reset your password</string>
             <objects>
                 <tableViewController id="akj-nj-CRz" customClass="JGPostViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="SZq-eT-B50">
-                        <rect key="frame" x="0.0" y="94" width="320" height="474"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -1415,6 +1482,16 @@ we’ll send you a link to reset your password</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LrT-xH-bb9">
+                                                    <rect key="frame" x="0.0" y="3" width="320" height="60"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="openCardPicker:" destination="akj-nj-CRz" eventType="touchUpInside" id="c9f-wC-jDY"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1425,7 +1502,7 @@ we’ll send you a link to reset your password</string>
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pO-CP-NcJ" customClass="JGButton">
+                                                <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pO-CP-NcJ" customClass="JGButton">
                                                     <rect key="frame" x="80" y="7" width="160" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.2666666667" green="0.55893590329999998" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -1439,6 +1516,9 @@ we’ll send you a link to reset your password</string>
                                                             <integer key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="gotoNextScreen:" destination="akj-nj-CRz" eventType="touchUpInside" id="vPg-Ao-qSi"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1451,9 +1531,10 @@ we’ll send you a link to reset your password</string>
                             <outlet property="delegate" destination="akj-nj-CRz" id="Vm6-UZ-tpq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Dismissals" prompt="Select Ground for" id="LGX-bY-LFo"/>
+                    <navigationItem key="navigationItem" title="Dismissals" id="LGX-bY-LFo"/>
                     <connections>
-                        <segue destination="wLo-Dh-0Kl" kind="push" id="XRD-6Z-DPG"/>
+                        <outlet property="reason" destination="PcF-yp-Lf1" id="1pB-mY-rJl"/>
+                        <segue destination="wLo-Dh-0Kl" kind="push" identifier="4" id="XRD-6Z-DPG"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhj-VF-bc7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1495,7 +1576,7 @@ we’ll send you a link to reset your password</string>
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agL-lc-f7u" customClass="JGButton">
+                                                <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agL-lc-f7u" customClass="JGButton">
                                                     <rect key="frame" x="80" y="7" width="160" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.2666666667" green="0.55893590329999998" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -1509,6 +1590,9 @@ we’ll send you a link to reset your password</string>
                                                             <integer key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="gotoNextScreen:" destination="wLo-Dh-0Kl" eventType="touchUpInside" id="55k-QN-tFo"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1523,7 +1607,8 @@ we’ll send you a link to reset your password</string>
                     </tableView>
                     <navigationItem key="navigationItem" title="Comments" id="DjH-FZ-Ssg"/>
                     <connections>
-                        <segue destination="FbI-7N-aJo" kind="push" id="AsI-s9-076"/>
+                        <outlet property="comment" destination="aE4-0z-AbL" id="HJY-uf-YTG"/>
+                        <segue destination="FbI-7N-aJo" kind="push" identifier="5" id="AsI-s9-076"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fp5-wh-wPK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1548,7 +1633,7 @@ we’ll send you a link to reset your password</string>
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="137"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4u7-zQ-VL0" customClass="JGButton">
+                                                <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4u7-zQ-VL0" customClass="JGButton">
                                                     <rect key="frame" x="171" y="54" width="129" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.2666666667" green="0.55893590329999998" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -1562,6 +1647,9 @@ we’ll send you a link to reset your password</string>
                                                             <integer key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="selectPhoto:" destination="FbI-7N-aJo" eventType="touchUpInside" id="D84-if-0eC"/>
+                                                    </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="We3-i5-x03">
                                                     <rect key="frame" x="20" y="9" width="120" height="120"/>
@@ -1577,7 +1665,7 @@ we’ll send you a link to reset your password</string>
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="137"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0LZ-hE-aSX" customClass="JGButton">
+                                                <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0LZ-hE-aSX" customClass="JGButton">
                                                     <rect key="frame" x="171" y="54" width="129" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.2666666667" green="0.55893590329999998" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -1591,6 +1679,9 @@ we’ll send you a link to reset your password</string>
                                                             <integer key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="selectPhoto:" destination="FbI-7N-aJo" eventType="touchUpInside" id="Oef-NX-fdi"/>
+                                                    </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ba-h4-WEw">
                                                     <rect key="frame" x="20" y="9" width="120" height="120"/>
@@ -1606,7 +1697,7 @@ we’ll send you a link to reset your password</string>
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="137"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3b-D8-DY4" customClass="JGButton">
+                                                <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3b-D8-DY4" customClass="JGButton">
                                                     <rect key="frame" x="171" y="54" width="129" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.2666666667" green="0.55893590329999998" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -1620,6 +1711,9 @@ we’ll send you a link to reset your password</string>
                                                             <integer key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="selectPhoto:" destination="FbI-7N-aJo" eventType="touchUpInside" id="DQJ-CJ-YDf"/>
+                                                    </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mRc-8l-vsh">
                                                     <rect key="frame" x="20" y="9" width="120" height="120"/>
@@ -1635,7 +1729,7 @@ we’ll send you a link to reset your password</string>
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hN-1j-GRl" customClass="JGButton">
+                                                <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hN-1j-GRl" customClass="JGButton">
                                                     <rect key="frame" x="80" y="7" width="160" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.2666666667" green="0.55893590329999998" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -1649,6 +1743,9 @@ we’ll send you a link to reset your password</string>
                                                             <integer key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="gotoNextScreen:" destination="FbI-7N-aJo" eventType="touchUpInside" id="N02-ch-hx8"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1662,8 +1759,15 @@ we’ll send you a link to reset your password</string>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Upload Pics" id="BIN-Ye-4xb"/>
+                    <connections>
+                        <outlet property="img2" destination="We3-i5-x03" id="8e0-uZ-raU"/>
+                        <outlet property="img3" destination="8ba-h4-WEw" id="Ckc-mk-n0b"/>
+                        <outlet property="img4" destination="mRc-8l-vsh" id="yaJ-mE-2Id"/>
+                        <segue destination="JKR-QS-9vz" kind="unwind" identifier="logout" unwindAction="unwindToMain:" id="4J2-Zv-2T5"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QMs-pO-5ND" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="JKR-QS-9vz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2738" y="-458"/>
         </scene>
@@ -1683,6 +1787,6 @@ we’ll send you a link to reset your password</string>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="s3C-Ma-hwe"/>
+        <segue reference="bQF-Fm-4Xo"/>
     </inferredMetricsTieBreakers>
 </document>

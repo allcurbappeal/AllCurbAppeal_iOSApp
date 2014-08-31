@@ -8,15 +8,23 @@
 
 #import <UIKit/UIKit.h>
 #import "JGPayViewController.h"
-#import "CountryPicker.h"
+#import "NSDate+TCUtils.h"
+#import "ActionSheetPicker.h"
 @class RadioButton;
+@class AbstractActionSheetPicker;
 
-@interface JGTableViewController : UITableViewController <CountryPickerDelegate,UITextFieldDelegate,NSURLConnectionDelegate,UIActionSheetDelegate> {
+@interface JGTableViewController : UITableViewController <UITextFieldDelegate,NSURLConnectionDelegate,UIActionSheetDelegate> {
     
     MBProgressHUD *HUD;
     NSMutableData* httpResponse;
     BOOL bIsCountry;
+    NSMutableArray *arrCountry;
 }
+@property (nonatomic,strong) NSDate *selectedDate;
+@property (nonatomic, strong) AbstractActionSheetPicker *actionSheetPicker;
+@property (nonatomic, assign) NSInteger selectedIndex;
+
+
 @property (nonatomic,strong) NSString *userID;
 
 @property (nonatomic, strong) IBOutlet RadioButton* maleButton;
@@ -35,6 +43,5 @@
 
 @property (nonatomic,strong) NSString *gender;
 
-@property (nonatomic,strong) CountryPicker *ctPicker;
 @property (nonatomic,strong) UIDatePicker *dobPicker;
 @end
