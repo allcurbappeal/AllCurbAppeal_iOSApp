@@ -16,6 +16,7 @@
 		A80AD96319B2F2C700FCAB3B /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = A80AD95C19B2F2C700FCAB3B /* SWActionSheet.m */; };
 		A80AD96419B2F2C700FCAB3B /* ActionSheetLocalePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A80AD95E19B2F2C700FCAB3B /* ActionSheetLocalePicker.m */; };
 		A80AD96819B2F48000FCAB3B /* NSDate+TCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A80AD96719B2F48000FCAB3B /* NSDate+TCUtils.m */; };
+		A81ADA7219B39DE4006193E1 /* JGResetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81ADA7119B39DE4006193E1 /* JGResetViewController.m */; };
 		A82323DF19ABB98F00107849 /* JGLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A82323DE19ABB98F00107849 /* JGLoginViewController.m */; };
 		A82901C619AA5B6900D8A65B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A82901C519AA5B6900D8A65B /* Foundation.framework */; };
 		A82901C819AA5B6900D8A65B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A82901C719AA5B6900D8A65B /* CoreGraphics.framework */; };
@@ -342,6 +343,8 @@
 		A80AD96519B2F43E00FCAB3B /* ActionSheetPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionSheetPicker.h; sourceTree = "<group>"; };
 		A80AD96619B2F48000FCAB3B /* NSDate+TCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TCUtils.h"; sourceTree = "<group>"; };
 		A80AD96719B2F48000FCAB3B /* NSDate+TCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TCUtils.m"; sourceTree = "<group>"; };
+		A81ADA7019B39DE4006193E1 /* JGResetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGResetViewController.h; sourceTree = "<group>"; };
+		A81ADA7119B39DE4006193E1 /* JGResetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGResetViewController.m; sourceTree = "<group>"; };
 		A82323DD19ABB98F00107849 /* JGLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGLoginViewController.h; sourceTree = "<group>"; };
 		A82323DE19ABB98F00107849 /* JGLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGLoginViewController.m; sourceTree = "<group>"; };
 		A82901C219AA5B6900D8A65B /* All Curb Appeal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "All Curb Appeal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -866,6 +869,8 @@
 			isa = PBXGroup;
 			children = (
 				A87B3FF119B255DC001EFA1D /* dog.jpg */,
+				A81ADA7019B39DE4006193E1 /* JGResetViewController.h */,
+				A81ADA7119B39DE4006193E1 /* JGResetViewController.m */,
 				A8F2BA7919B1155600D28E2B /* JGMainObject.h */,
 				A8F2BA7A19B1155600D28E2B /* JGMainObject.m */,
 				A8F2BA7C19B1179200D28E2B /* JGPostViewController.h */,
@@ -1526,6 +1531,7 @@
 				A82901D619AA5B6900D8A65B /* JGAppDelegate.m in Sources */,
 				A82323DF19ABB98F00107849 /* JGLoginViewController.m in Sources */,
 				A8F2BA9C19B1233B00D28E2B /* ASIInputStream.m in Sources */,
+				A81ADA7219B39DE4006193E1 /* JGResetViewController.m in Sources */,
 				A80AD96219B2F2C700FCAB3B /* DistancePickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
