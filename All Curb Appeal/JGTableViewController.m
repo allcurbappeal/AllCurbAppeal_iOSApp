@@ -40,6 +40,7 @@
 }
 -(IBAction)openCountryPicker:(id)sender {
 
+    [self dismissKeyboard];
     bIsCountry = YES;
     
     arrCountry = [NSMutableArray array];
@@ -67,6 +68,7 @@
 
 -(IBAction)openDatePicker:(id)sender {
 
+    [self dismissKeyboard];
     _actionSheetPicker = [[ActionSheetDatePicker alloc] initWithTitle:@"Date of Birth" datePickerMode:UIDatePickerModeDate selectedDate:self.selectedDate target:self action:@selector(dateWasSelected:element:) origin:sender];
     self.actionSheetPicker.hideCancel = YES;
     [self.actionSheetPicker showActionSheetPicker];
@@ -264,6 +266,11 @@
     }
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    
+    return YES;
+}
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
