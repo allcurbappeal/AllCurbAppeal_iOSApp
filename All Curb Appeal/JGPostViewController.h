@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MobileCoreServices/MobileCoreServices.h>
 #import "ActionSheetPicker.h"
-@interface JGPostViewController : UITableViewController <UIImagePickerControllerDelegate,UIAlertViewDelegate,NSURLConnectionDelegate> {
+@interface JGPostViewController : UITableViewController <UIImagePickerControllerDelegate,UIAlertViewDelegate,UINavigationControllerDelegate,NSURLConnectionDelegate> {
     
     MBProgressHUD *HUD;
     NSMutableData* httpResponse;

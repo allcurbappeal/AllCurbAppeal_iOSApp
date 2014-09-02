@@ -123,7 +123,7 @@
             break;
         case 3:
             if([self checkScreenThree]) {
-                [[JGMainObject sharedInstance] setCat_id:_catID];
+                [[JGMainObject sharedInstance] setCat_id:[_catID integerValue]];
                 [self performSegueWithIdentifier:@"4" sender:self];
             }
             break;
@@ -227,7 +227,7 @@
 - (void)requestFinished:(ASIHTTPRequest *)request {
     [self removeHUD];
     // Use when fetching text data
-    NSString *responseString = [request responseString];
+    //NSString *responseString = [request responseString];
     
     NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[request responseData] options:kNilOptions
                                                                  error:nil];
@@ -293,7 +293,11 @@
     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"content-type"];
     [request setHTTPBody: requestData];
     
-    id aa = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    if (!theConnection) {
+        
+        httpResponse = nil;
+    }
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
@@ -310,7 +314,7 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
     [self removeHUD];
-    NSString* responseString = [[[NSString alloc] initWithData:httpResponse encoding:NSUTF8StringEncoding] copy];
+   // NSString* responseString = [[[NSString alloc] initWithData:httpResponse encoding:NSUTF8StringEncoding] copy];
     
     NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:httpResponse options:kNilOptions
                                                                  error:nil];

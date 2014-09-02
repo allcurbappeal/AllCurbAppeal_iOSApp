@@ -93,7 +93,11 @@
     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"content-type"];
     [request setHTTPBody: requestData];
     
-    id aa = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    if (!theConnection) {
+        
+        httpResponse = nil;
+    }
 }
 
 -(void)removeHUD {
@@ -116,7 +120,7 @@
 {
     [self removeHUD];
     
-    NSString* responseString = [[[NSString alloc] initWithData:httpResponse encoding:NSUTF8StringEncoding] copy];
+   // NSString* responseString = [[[NSString alloc] initWithData:httpResponse encoding:NSUTF8StringEncoding] copy];
     
     NSError *error = nil;
     NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:httpResponse options:kNilOptions

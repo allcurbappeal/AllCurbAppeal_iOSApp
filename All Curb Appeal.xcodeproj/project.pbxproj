@@ -293,7 +293,6 @@
 		A838908819AFC59700B537C4 /* ZM.png in Resources */ = {isa = PBXBuildFile; fileRef = A8388F8A19AFC59700B537C4 /* ZM.png */; };
 		A838908919AFC59700B537C4 /* ZW.png in Resources */ = {isa = PBXBuildFile; fileRef = A8388F8B19AFC59700B537C4 /* ZW.png */; };
 		A855974A19AD1FA200C289FB /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A855974819AD1FA200C289FB /* MBProgressHUD.m */; };
-		A87B3FF219B255DC001EFA1D /* dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A87B3FF119B255DC001EFA1D /* dog.jpg */; };
 		A8F2BA7B19B1155600D28E2B /* JGMainObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F2BA7A19B1155600D28E2B /* JGMainObject.m */; };
 		A8F2BA7E19B1179200D28E2B /* JGPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F2BA7D19B1179200D28E2B /* JGPostViewController.m */; };
 		A8F2BA8419B1230A00D28E2B /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F2BA8019B1230A00D28E2B /* ASIFormDataRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -633,7 +632,6 @@
 		A8388F8B19AFC59700B537C4 /* ZW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZW.png; sourceTree = "<group>"; };
 		A855974719AD1FA200C289FB /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		A855974819AD1FA200C289FB /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		A87B3FF119B255DC001EFA1D /* dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog.jpg; sourceTree = "<group>"; };
 		A8F2BA7919B1155600D28E2B /* JGMainObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGMainObject.h; sourceTree = "<group>"; };
 		A8F2BA7A19B1155600D28E2B /* JGMainObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGMainObject.m; sourceTree = "<group>"; };
 		A8F2BA7C19B1179200D28E2B /* JGPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGPostViewController.h; sourceTree = "<group>"; };
@@ -868,7 +866,6 @@
 		A8388E8C19AFBF5800B537C4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A87B3FF119B255DC001EFA1D /* dog.jpg */,
 				A81ADA7019B39DE4006193E1 /* JGResetViewController.h */,
 				A81ADA7119B39DE4006193E1 /* JGResetViewController.m */,
 				A8F2BA7919B1155600D28E2B /* JGMainObject.h */,
@@ -1463,7 +1460,6 @@
 				A8388FEB19AFC59700B537C4 /* GW.png in Resources */,
 				A838907419AFC59700B537C4 /* UA.png in Resources */,
 				A8388F9519AFC59700B537C4 /* AO.png in Resources */,
-				A87B3FF219B255DC001EFA1D /* dog.jpg in Resources */,
 				A838904519AFC59700B537C4 /* PS.png in Resources */,
 				A838906519AFC59700B537C4 /* TD.png in Resources */,
 				A838901119AFC59700B537C4 /* LR.png in Resources */,
@@ -1670,6 +1666,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "All Curb Appeal/All Curb Appeal-Prefix.pch";
 				INFOPLIST_FILE = "All Curb Appeal/All Curb Appeal-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1683,6 +1680,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "All Curb Appeal/All Curb Appeal-Prefix.pch";
 				INFOPLIST_FILE = "All Curb Appeal/All Curb Appeal-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

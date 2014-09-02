@@ -56,7 +56,11 @@
     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"content-type"];
     [request setHTTPBody: requestData];
     
-    id aa = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    if (!theConnection) {
+        
+        httpResponse = nil;
+    }
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
@@ -74,14 +78,14 @@
 {
     [self removeHUD];
     
-    NSString* responseString = [[[NSString alloc] initWithData:httpResponse encoding:NSUTF8StringEncoding] copy];
+   // NSString* responseString = [[[NSString alloc] initWithData:httpResponse encoding:NSUTF8StringEncoding] copy];
     
     NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:httpResponse options:kNilOptions
                                                                  error:nil];
     
     if([dictionary valueForKey:@"success"] != nil){
         if([[dictionary valueForKey:@"success"] integerValue] == 1){
-            NSDictionary *data = [dictionary valueForKey:@"data"];
+            //NSDictionary *data = [dictionary valueForKey:@"data"];
             
 //            catArr = [data valueForKey:@"categories_name"];
 //            catIds = [data valueForKey:@"id"];
