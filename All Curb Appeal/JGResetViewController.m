@@ -44,7 +44,7 @@
     [requestURL appendString:WEB_SERVICE_PATH];
     
     NSMutableString* requestBody = [[NSMutableString alloc] init];
-    [requestBody appendString:@"tag=forget_password"];
+    [requestBody appendString:@"tag=forget_password&"];
     [requestBody appendString:[NSString stringWithFormat:@"UserName=%@",_recovery.text]];
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL: [NSURL URLWithString: [NSString stringWithString:requestURL]]];
@@ -85,8 +85,9 @@
     
     if([dictionary valueForKey:@"success"] != nil){
         if([[dictionary valueForKey:@"success"] integerValue] == 1){
-            //NSDictionary *data = [dictionary valueForKey:@"data"];
             
+            
+            [self showMessage:[dictionary valueForKey:@"message"] withTitle:@"Reset Link Sent"];
 //            catArr = [data valueForKey:@"categories_name"];
 //            catIds = [data valueForKey:@"id"];
 //            
@@ -95,7 +96,7 @@
             
         }
         else {
-            [self showMessage:[dictionary valueForKey:@"message"]];
+            [self showMessage:[dictionary valueForKey:@"message"] withTitle:@"Error !"];
         }
     }
     
@@ -114,14 +115,39 @@
     [HUD removeFromSuperview];
 	 HUD = nil;
 }
-- (void)showMessage:(NSString *)strMsg {
+- (void)showMessage:(NSString *)strMsg withTitle:(NSString *)strTitle{
     [self removeHUD];
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:strMsg delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:strTitle message:strMsg delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
     [alert show];
     
 }
 
+- (IBAction)openLinks:(id)sender {
+    
+    switch ([sender tag]) {
+        case 1:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.facebook.com"]];
+            break;
+        case 2:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.twitter.com"]];
+            break;
+        case 3:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com"]];
+            break;
+        case 4:
+            //[self presentViewController:vc2 animated:YES completion:nil];
+            [self performSegueWithIdentifier:@"legal" sender:self];
+            break;
+        case 5:
+            [self performSegueWithIdentifier:@"privacy" sender:self];
+            break;
+            
+        default:
+            break;
+    }
+    
+}
 
 /*
 #pragma mark - Navigation

@@ -172,6 +172,30 @@
     return YES;
 }
 
-
+- (IBAction)openLinks:(id)sender {
+    
+    switch ([sender tag]) {
+        case 1:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.facebook.com"]];
+            break;
+        case 2:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.twitter.com"]];
+            break;
+        case 3:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com"]];
+            break;
+        case 4:
+            //[self presentViewController:vc2 animated:YES completion:nil];
+            [self performSegueWithIdentifier:@"legal" sender:self];
+            break;
+        case 5:
+            [self performSegueWithIdentifier:@"privacy" sender:self];
+            break;
+            
+        default:
+            break;
+    }
+    
+}
 
 @end

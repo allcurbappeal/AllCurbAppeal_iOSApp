@@ -293,6 +293,7 @@
 		A838908819AFC59700B537C4 /* ZM.png in Resources */ = {isa = PBXBuildFile; fileRef = A8388F8A19AFC59700B537C4 /* ZM.png */; };
 		A838908919AFC59700B537C4 /* ZW.png in Resources */ = {isa = PBXBuildFile; fileRef = A8388F8B19AFC59700B537C4 /* ZW.png */; };
 		A855974A19AD1FA200C289FB /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A855974819AD1FA200C289FB /* MBProgressHUD.m */; };
+		A890E7E119B7A03600F45C46 /* JGModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A890E7E019B7A03600F45C46 /* JGModalViewController.m */; };
 		A8F2BA7B19B1155600D28E2B /* JGMainObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F2BA7A19B1155600D28E2B /* JGMainObject.m */; };
 		A8F2BA7E19B1179200D28E2B /* JGPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F2BA7D19B1179200D28E2B /* JGPostViewController.m */; };
 		A8F2BA8419B1230A00D28E2B /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F2BA8019B1230A00D28E2B /* ASIFormDataRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -632,6 +633,8 @@
 		A8388F8B19AFC59700B537C4 /* ZW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZW.png; sourceTree = "<group>"; };
 		A855974719AD1FA200C289FB /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		A855974819AD1FA200C289FB /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		A890E7DF19B7A03600F45C46 /* JGModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGModalViewController.h; sourceTree = "<group>"; };
+		A890E7E019B7A03600F45C46 /* JGModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGModalViewController.m; sourceTree = "<group>"; };
 		A8F2BA7919B1155600D28E2B /* JGMainObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGMainObject.h; sourceTree = "<group>"; };
 		A8F2BA7A19B1155600D28E2B /* JGMainObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGMainObject.m; sourceTree = "<group>"; };
 		A8F2BA7C19B1179200D28E2B /* JGPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGPostViewController.h; sourceTree = "<group>"; };
@@ -880,6 +883,8 @@
 				A82323DE19ABB98F00107849 /* JGLoginViewController.m */,
 				A836F2A119B104F6006B930B /* JGPayViewController.h */,
 				A836F2A219B104F6006B930B /* JGPayViewController.m */,
+				A890E7DF19B7A03600F45C46 /* JGModalViewController.h */,
+				A890E7E019B7A03600F45C46 /* JGModalViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -1513,6 +1518,7 @@
 				A855974A19AD1FA200C289FB /* MBProgressHUD.m in Sources */,
 				A8F2BA7B19B1155600D28E2B /* JGMainObject.m in Sources */,
 				A8F2BA8419B1230A00D28E2B /* ASIFormDataRequest.m in Sources */,
+				A890E7E119B7A03600F45C46 /* JGModalViewController.m in Sources */,
 				A8388E7C19AFAF8E00B537C4 /* JGTextField.m in Sources */,
 				A8F2BA9119B1232900D28E2B /* Reachability.m in Sources */,
 				A8388E8819AFBECC00B537C4 /* RadioButton.m in Sources */,
