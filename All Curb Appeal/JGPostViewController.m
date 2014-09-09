@@ -129,6 +129,9 @@
             break;
         case 4:
             if([self checkScreenFour]) {
+                if([_comment.text length] <= 0)
+                    _comment.text = @"No Comments";
+                
                 [[JGMainObject sharedInstance] setComment:_comment.text];
                 [self performSegueWithIdentifier:@"5" sender:self];
             }
@@ -165,6 +168,8 @@
     return NO;
 }
 - (BOOL)checkScreenFour {
+    
+    return YES;
     if([_comment.text length]>0)
         return YES;
     
@@ -172,9 +177,11 @@
     return NO;
 }
 - (BOOL)checkScreenFifth {
-    if(_img4.image!= nil && _img2.image != nil && _img3.image != nil)
+   
+    if(_img4.image!= nil || _img2.image != nil || _img3.image != nil)
         return YES;
-    [self showMessage:@"Please upload all three images"];
+    
+    [self showMessage:@"Please upload atleast one image"];
     return NO;
 }
 
